@@ -1,13 +1,15 @@
 Sequel.migration do
   change do
     create_table(:users) do
-      primary_key :id
-      String :email
-      String :name
-      String: gender
-      String: picture
-      Integer: dob
-      String: phone
-      String: location
-      String: password
+      primary_key :id,    :null => false
+      String  :email,     :null => false
+      String  :name,      :null => false
+      String  :gender,    :null => false
+      String  :picture,   :null => false
+      Integer :dob,       :null => false
+      String  :phone,     :null => false
+      String  :location,  :null => false
+      String  :password,  :null => false
     end
+  end
+end
